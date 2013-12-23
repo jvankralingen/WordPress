@@ -1,0 +1,36 @@
+{
+    "id": "wordpress",
+    "name": "Wordpress",
+    "source": "github",
+    "description": "A simple WordPress site",
+    "doc-url": "https://github.com/jvankralingen/Wordpress/blob/master/README.md",
+    "supported-by" : "community", 
+    "order" : 5,
+
+    "disabled" : true,
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "wordpress"
+        }
+    ],
+    "runtime": {
+        "type": "php",
+        "app-variables:": {
+            "key_auth": "$RANDOM_VALUE",
+            "key_auth_sec": "$RANDOM_VALUE",
+            "key_login": "$RANDOM_VALUE",
+            "key_nonce": "$RANDOM_VALUE",
+            "salt_auth": "$RANDOM_VALUE",
+            "salt_auth_sec": "$RANDOM_VALUE",
+            "salt_login": "$RANDOM_VALUE",
+            "salt_nonce": "$RANDOM_VALUE",
+            "maxPost": 10
+        }
+    },    
+    "build-with-jenkins": {
+        "template": {
+            "type": "https://raw.github.com/jvankralingen/Wordpress/master/config.xml"
+        }
+    }
+}
