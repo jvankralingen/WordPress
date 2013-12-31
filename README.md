@@ -18,5 +18,3 @@ Then, you can commit changes to git, and they will be published automatically. E
 ## More documentation:
 
 ###[PHP ClickStack](https://github.com/cloudbees-community/php-clickstack)
-
-Test
